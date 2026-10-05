@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Invoice</title>
+    {style}
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>Create Invoice</h1>
+
+        <form method="post">
+
+            <label>Organization</label>
+            <input
+                type="text"
+                name="organization"
+                placeholder="Company / organization"
+                required
+            >
+
+            <label>Amount</label>
+            <input
+                type="number"
+                name="amount"
+                step="0.01"
+                min="0"
+                placeholder="0.00"
+                required
+            >
+
+            <label>Description of work</label>
+            <textarea
+                name="description"
+                placeholder="Describe the consulting work..."
+                required
+            ></textarea>
+
+            <div class="row">
+
+                <div>
+                    <label>Tax</label>
+                    <input
+                        type="number"
+                        name="tax"
+                        step="0.01"
+                        min="0"
+                        value="0"
+                    >
+                </div>
+
+                <div>
+                    <label>Date</label>
+                    <input
+                        type="date"
+                        name="invoice_date"
+                        value="{today}"
+                        required
+                    >
+                </div>
+
+            </div>
+
+            <label>Place</label>
+            <input
+                type="text"
+                name="place"
+                placeholder="Bengaluru"
+                required
+            >
+
+            <label>Consultant's address</label>
+            <textarea
+                name="consultant_address"
+                placeholder="Your name and address..."
+                required
+            ></textarea>
+
+            <button type="submit" name="action" value="preview">
+                Preview Invoice
+            </button>
+
+            <button type="submit" name="action" value="save">
+                Save Invoice
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
